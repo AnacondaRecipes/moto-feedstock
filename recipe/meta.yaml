@@ -113,6 +113,7 @@ test:
     - pip
     - freezegun
     - parameterized
+    - junit-xml
   source_files:
     - github/tests
   commands:
