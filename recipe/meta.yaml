@@ -112,6 +112,7 @@ test:
     - pytest
     - pip
     - freezegun
+    - junit-xml
     - parameterized
   source_files:
     - github/tests
