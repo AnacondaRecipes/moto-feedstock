@@ -123,6 +123,9 @@ test:
     - >
         nosetests tests 
         --exclude-test=test_lambda.test_invoke_requestresponse_function
+        --exclude-test=test_lambda.test_create_based_on_s3_with_missing_bucket
+        --exclude-test=tests.test_cloudformation.test_validate.test_boto3_json_invalid_missing_resource
+        --exclude-test=tests.test_cloudformation.test_validate.test_boto3_yaml_invalid_missing_resource
         --exclude-test=test_cognitoidp.test_token_legitimacy
         --exclude-test=test_lambda.test_invoke_function_from_dynamodb
         --exclude-test=test_lambda.test_invoke_function_from_sns
