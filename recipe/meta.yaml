@@ -32,6 +32,7 @@ requirements:
     - cryptography >=2.3.0
     - requests >=2.5
     - xmltodict
+    - junit-xml
     - six >1.9
     - werkzeug
     - pyyaml >=5.1
