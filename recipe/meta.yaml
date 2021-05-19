@@ -8,7 +8,7 @@ source:
   - url: https://pypi.io/packages/source/m/moto/moto-{{ version }}.tar.gz
     sha256: 4209ee3241df1160523a58a169d31d0c8aa10b7aa75894484de58cbfacf14523
   - url: https://github.com/spulec/moto/archive/{{ version }}.tar.gz
-    sha256: 4209ee3241df1160523a58a169d31d0c8aa10b7aa75894484de58cbfacf14523
+    sha256: c467814b82e577182b9367262a254474be421bb54091566e4daad25f44fd1a56
     folder: github
 
 build:
@@ -43,7 +43,7 @@ requirements:
     - more-itertools
     - zipp
     - docker-py >=2.5.1
-    - jsondiff 1.1.2
+    - jsondiff >=1.1.2
     - aws-xray-sdk !=0.96,>=0.93
     - responses >=0.9.0
     - cfn-lint >=0.4.0
@@ -56,6 +56,7 @@ requirements:
     - inflection
     - prompt_toolkit
     - click
+    - markupsafe !=2.0.0a1
 
 test:
   imports:
