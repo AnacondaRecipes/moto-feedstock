@@ -22,6 +22,7 @@ requirements:
   host:
     - python >=3.5
     - pip
+    - wheel
   run:
     - python >=3.5
     - setuptools
@@ -41,7 +42,6 @@ requirements:
     - ecdsa <0.15
     - mock
     - more-itertools
-    - zipp
     - docker-py >=2.5.1
     - jsondiff >=1.1.2
     - aws-xray-sdk !=0.96,>=0.93
