@@ -8,7 +8,7 @@ source:
   - url: https://pypi.io/packages/source/m/moto/moto-{{ version }}.tar.gz
     sha256: 569049a42bc63b6c4702fda0fee952e4d0088cd7f4989aa8eaaae0b222f7a2a1
   - url: https://github.com/spulec/moto/archive/{{ version }}.tar.gz
-    sha256: 569049a42bc63b6c4702fda0fee952e4d0088cd7f4989aa8eaaae0b222f7a2a1
+    sha256: 64c8b8d5f981740137a641d08e345a68c6b78e773fdca7fe4a98e0d74b698876
     folder: github
 
 build:
@@ -23,6 +23,7 @@ requirements:
     - python >=3.5
     - pip
     - wheel
+    - setuptools
   run:
     - python >=3.5
     - setuptools
