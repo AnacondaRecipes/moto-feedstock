@@ -122,9 +122,13 @@ test:
     - pip
     - freezegun
     - parameterized
+    # needed for passing pip check
+    - rsa
+    - pyasn1
   source_files:
     - github/tests
   commands:
+    - pip check
     - moto_server --help
     - pip install sure
     - cd github
