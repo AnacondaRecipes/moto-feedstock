@@ -120,6 +120,7 @@ test:
     - nose
     - nose-exclude
     - pytest
+    - pluggy <1.0.0
     - pip
     - python <3.10
     - freezegun
