@@ -14,7 +14,7 @@ source:
 build:
   number: 0
   noarch: python
-  skip: True  # [py<3.5]
+  skip: True  # [py<3.5 or s390x]
   entry_points:
     - moto_server = moto.server:main
   script: {{ PYTHON }} -m pip install . --no-deps -vv
