@@ -15,7 +15,7 @@ build:
   number: 0
   noarch: python
   # there seem to be missing dependencies for s390x
-  skip: True  # [py<3.7 or s390x]
+  skip: True  # [py<37]
   entry_points:
     - moto_server = moto.server:main
   script: {{ PYTHON }} -m pip install . --no-deps -vv
