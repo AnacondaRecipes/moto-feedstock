@@ -1,4 +1,4 @@
-{% set version = "2.1.0" %}
+{% set version = "2.2.9" %}
 
 package:
   name: moto
@@ -6,21 +6,23 @@ package:
 
 source:
   - url: https://pypi.io/packages/source/m/moto/moto-{{ version }}.tar.gz
-    sha256: ab4f094bf50885c7e593c9d0a27756eeb522c916d6f58c02437cb3654835f8dd
+    sha256: f94502cc5c075742cdd58a8983c0565f129a43d43bba2b9b6f14a5ace96ee751
   - url: https://github.com/spulec/moto/archive/{{ version }}.tar.gz
-    sha256: 9e5683dfa8887fce03facecec1c1a2f265f137107050868ce65918c0122c1ac3
+    sha256: 50ee292c82d2782d3253045037fae3e42ac45358ceff3a7274624aab228ea10b
     folder: github
 
 build:
   number: 0
   noarch: python
+  # there seem to be missing docker-py >=2.5.1 and cfn-lint >=0.4.0 for s390x
+  skip: True  # [py<37 or s390x]
   entry_points:
     - moto_server = moto.server:main
   script: {{ PYTHON }} -m pip install . --no-deps -vv
 
 requirements:
   host:
-    - python >=3.5
+    - python
     - pip
     - wheel
     - setuptools
@@ -119,7 +121,9 @@ test:
     - nose
     - nose-exclude
     - pytest
+    - pluggy <1.0.0
     - pip
+    - python <3.10
     - freezegun
     - parameterized
     # needed for passing pip check
