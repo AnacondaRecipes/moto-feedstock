@@ -71,7 +71,7 @@ test:
     - moto.core
     - moto.datapipeline
     - moto.dynamodb
-    - moto.dynamodb2
+    - moto.dynamodb_v20111205
     - moto.dynamodbstreams
     - moto.ec2
     - moto.ec2.responses
@@ -93,10 +93,8 @@ test:
     - moto.opsworks
     - moto.organizations
     - moto.packages
-    - moto.packages.httpretty
     - moto.polly
     - moto.rds
-    - moto.rds2
     - moto.redshift
     - moto.resourcegroupstaggingapi
     - moto.route53
