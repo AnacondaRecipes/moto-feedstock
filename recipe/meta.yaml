@@ -27,7 +27,6 @@ requirements:
     - setuptools
   run:
     - python
-    - setuptools
     - jinja2 >=2.10.1
     # we need to bound this since 198 changed some of the api
     - boto3 >=1.9.201
