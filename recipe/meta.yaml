@@ -145,9 +145,7 @@ about:
   summary: A library that allows your python tests to easily mock out the boto library.
   license_family: APACHE
   license_file: LICENSE
-  license_url: https://github.com/spulec/moto/blob/{{ version }}/LICENSE
   doc_url: http://docs.getmoto.org
-  doc_source_url: https://github.com/spulec/moto/tree/{{ version }}/docs
   dev_url: https://github.com/spulec/moto
 
 extra:
