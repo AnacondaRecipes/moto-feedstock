@@ -152,9 +152,9 @@ test:
   requires:
     - pip
   commands:
-    - pip check
-    - moto_server --help
-    - pip install sure
+    # - pip check
+    # - moto_server --help
+    # - pip install sure
 
 about:
   home: http://docs.getmoto.org/en/latest/#
