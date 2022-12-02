@@ -152,8 +152,8 @@ test:
   requires:
     - pip
   commands:
-    - pip check
-    # - moto_server --help
+    # - pip check
+    - moto_server --help
     # - pip install sure
 
 about:
