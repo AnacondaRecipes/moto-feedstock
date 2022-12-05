@@ -152,7 +152,7 @@ test:
   requires:
     - pip
   commands:
-    # - pip check
+    - pip check
     - moto_server --help
     - pip install sure
 
