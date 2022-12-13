@@ -152,7 +152,6 @@ test:
   commands:
     - pip check
     - moto_server --help
-    - pip install sure
 
 about:
   home: https://docs.getmoto.org/en/latest/#
