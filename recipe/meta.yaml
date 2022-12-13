@@ -157,13 +157,14 @@ test:
     - pip install sure
 
 about:
-  home: http://docs.getmoto.org/en/latest/#
+  home: https://docs.getmoto.org/en/latest/#
   description : A library that allows you to easily mock out tests based on AWS infrastructure.
   summary: A library that allows your python tests to easily mock out the boto library.
   license: Apache-2.0
   license_family: APACHE
   license_file: LICENSE
-  doc_url: http://docs.getmoto.org
+  license_url: https://github.com/spulec/moto/blob/master/LICENSE
+  doc_url: https://docs.getmoto.org
   dev_url: https://github.com/spulec/moto
 
 extra:
