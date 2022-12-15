@@ -30,6 +30,7 @@ requirements:
     - botocore >=1.12.201
     - cryptography >=3.3.1
     - dataclasses  # [py<37]
+    - ecdsa !=0.15
     - requests >=2.5
     - xmltodict
     - werkzeug >=0.5,!=2.2.0,!=2.2.1
