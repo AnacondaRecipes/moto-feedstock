@@ -171,3 +171,6 @@ extra:
     - johanneskoester
     - mariusvniekerk
     - hajapy
+
+  skip-lints:
+  - missing_pip_check
