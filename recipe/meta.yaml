@@ -175,4 +175,4 @@ extra:
     - hajapy
 
   skip-lints:
-  - missing_pip_check
+    - missing_pip_check
