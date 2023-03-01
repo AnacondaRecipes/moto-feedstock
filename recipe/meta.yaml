@@ -159,7 +159,6 @@ about:
   license: Apache-2.0
   license_family: APACHE
   license_file: LICENSE
-  license_url: https://github.com/spulec/moto/blob/master/LICENSE
   doc_url: https://docs.getmoto.org
   dev_url: https://github.com/spulec/moto
 
