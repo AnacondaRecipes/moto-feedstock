@@ -11,7 +11,7 @@ source:
 build:
   number: 0
   # there seem to be missing docker-py >=2.5.1 and cfn-lint >=0.4.0 for s390x
-  skip: True  # [py<36 or s390x]
+  skip: True  # [py<37 or s390x]
   entry_points:
     - moto_server = moto.server:main
   script: {{ PYTHON }} -m pip install . --no-deps -vv
