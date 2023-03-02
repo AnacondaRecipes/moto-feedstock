@@ -160,7 +160,7 @@ about:
   license_family: APACHE
   license_file: LICENSE
   doc_url: https://docs.getmoto.org
-  dev_url: https://github.com/spulec/moto
+  dev_url: https://github.com/getmoto/moto
 
 extra:
   recipe-maintainers:
