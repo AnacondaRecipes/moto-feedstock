@@ -1,4 +1,4 @@
-{% set version = "4.1.3" %}
+{% set version = "5.0.3" %}
 
 package:
   name: moto
@@ -6,7 +6,7 @@ package:
 
 source:
   - url: https://pypi.io/packages/source/m/moto/moto-{{ version }}.tar.gz
-    sha256: c8200ccaa9440c2e9daa0bd5e0bd768a719db5a2c82ea8d782f0e3fa09a3c5e2
+    sha256: 070ac2edf89ad7aee28534481ce68e2f344c8a6a8fefec5427eea0d599bfdbdb
 
 build:
   number: 0
@@ -14,13 +14,13 @@ build:
   skip: True  # [py<37 or s390x]
   entry_points:
     - moto_server = moto.server:main
-  script: {{ PYTHON }} -m pip install . --no-deps -vv
+  script: {{ PYTHON }} -m pip install . --no-deps --no-build-isolation -vv
 
 requirements:
   host:
     - python
     - pip
-    - setuptools
+    - setuptools >=40.6.0
     - wheel
   run:
     - python
@@ -45,8 +45,9 @@ requirements:
     - flask_cors
     - jsondiff >=1.1.2
     - aws-xray-sdk >=0.93,!=0.96
-    - openapi-spec-validator >=0.2.8
+    - openapi-spec-validator >=0.5.0
     - pyparsing >=3.0.7
+    - antlr4-python3-runtime
 
 test:
   imports:
@@ -145,6 +146,7 @@ test:
     - moto.utilities
     - moto.wafv2
     - moto.xray
+    - openapi_spec_validator.validation
   requires:
     - pip
   commands:
