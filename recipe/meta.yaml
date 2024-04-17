@@ -1,4 +1,4 @@
-{% set version = "5.0.3" %}
+{% set version = "5.0.5" %}
 
 package:
   name: moto
@@ -6,7 +6,7 @@ package:
 
 source:
   - url: https://pypi.io/packages/source/m/moto/moto-{{ version }}.tar.gz
-    sha256: 070ac2edf89ad7aee28534481ce68e2f344c8a6a8fefec5427eea0d599bfdbdb
+    sha256: 2eaca2df7758f6868df420bf0725cd0b93d98709606f1fb8b2343b5bdc822d91
 
 build:
   number: 0
@@ -48,6 +48,7 @@ requirements:
     - openapi-spec-validator >=0.5.0
     - pyparsing >=3.0.7
     - antlr4-python3-runtime
+    - joserfc
 
 test:
   imports:
