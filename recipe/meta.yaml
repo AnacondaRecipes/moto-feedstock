@@ -12,7 +12,7 @@ build:
   number: 0
   # there seem to be missing docker-py >=2.5.1 and cfn-lint >=0.4.0 for s390x
   # there is also and issue with 3.12 and graphql-core which results in a failed build
-  skip: True  # [py<37 or s390x or py>311]
+  skip: True  # [py<37 or s390x]
   entry_points:
     - moto_server = moto.server:main
   script: {{ PYTHON }} -m pip install . --no-deps --no-build-isolation -vv
@@ -25,7 +25,6 @@ requirements:
     - wheel
   run:
     - python
-    # we need to bound this since 198 changed some of the api
     - boto3 >=1.9.201
     - botocore >=1.14.0
     - cryptography >=3.3.1
@@ -35,8 +34,6 @@ requirements:
     - python-dateutil >=2.1,<3.0.0
     - responses >=0.15.0
     - jinja2 >=2.10.1
-    - python-jose >=3.1.0,<4.0.0
-    - ecdsa !=0.15
     - docker-py >=2.5.1
     - graphql-core
     - pyyaml >=5.1
@@ -49,7 +46,7 @@ requirements:
     - openapi-spec-validator >=0.5.0
     - pyparsing >=3.0.7
     - antlr4-python3-runtime
-    - joserfc
+    - joserfc >=0.9.0
 
 test:
   imports:
