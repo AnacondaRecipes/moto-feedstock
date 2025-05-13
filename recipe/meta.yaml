@@ -46,7 +46,7 @@ requirements:
     - antlr4-python3-runtime
     - pyparsing >=3.0.7
     - jsonpath-ng
-    - py-partiql-parser >=0.5.4
+    - py-partiql-parser 0.5.4
     - multipart
     
 test:
