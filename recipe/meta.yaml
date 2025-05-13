@@ -9,9 +9,8 @@ source:
     sha256: 2eaca2df7758f6868df420bf0725cd0b93d98709606f1fb8b2343b5bdc822d91
 
 build:
-  number: 0
-  # there seem to be missing docker-py >=2.5.1 and cfn-lint >=0.4.0 for s390x
-  skip: True  # [py<38 or s390x]
+  number: 1
+  skip: True  # [py<38]
   entry_points:
     - moto_server = moto.server:main
     - moto_proxy = moto.proxy:main
