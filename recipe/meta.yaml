@@ -47,8 +47,6 @@ requirements:
     - flask !=2.2.0,!=2.2.1
 
 test:
-  source_files:
-    - tests
   imports:
     - moto
     - moto.acm
@@ -154,6 +152,7 @@ test:
     - multipart
   commands:
     - pip check
+    - python -c "from importlib.metadata import version; assert(version('{{ name }}')=='{{ version }}')"
     - moto_server --help
     - moto_proxy --help
 
