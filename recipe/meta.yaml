@@ -31,7 +31,6 @@ requirements:
     - requests >=2.5
     - xmltodict
     - werkzeug >=0.5,!=2.2.0,!=2.2.1
-    - python-dateutil >=2.1,<3.0.0
     - responses >=0.15.0,!=0.25.5
   run_constrained:
     - joserfc >=0.9.0
