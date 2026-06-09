@@ -1,5 +1,5 @@
 {% set name = "moto" %}
-{% set version = "5.1.19" %}
+{% set version = "5.2.2" %}
 
 package:
   name: {{ name }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: a13423e402366b6affab07ed28e1df5f3fcc54ef68fc8d83dc9f824da7a4024e
+  sha256: aac8023a429e125e91c91f8f4730a67b54f518cda587352f7e67252fe3168f75
 
 build:
   number: 0
