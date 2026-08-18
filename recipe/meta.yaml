@@ -10,7 +10,7 @@ source:
   sha256: aac8023a429e125e91c91f8f4730a67b54f518cda587352f7e67252fe3168f75
 
 build:
-  number: 0
+  number: 1
   skip: true  # [py<310]
   entry_points:
     - moto_server = moto.server:main
@@ -147,8 +147,13 @@ test:
     - openapi-spec-validator
     - aws-xray-sdk
     - multipart
+    # Tests require a valid CA bundle with the path to certificates.
+    # ca-certificates contains needed certificates.
+    - ca-certificates
   commands:
     - pip check
+    # Tests require a valid CA bundle with the path to certificates.
+    - export REQUESTS_CA_BUNDLE=/ssl/cacert.pem  # [not win]
     - python -c "from importlib.metadata import version; assert(version('{{ name }}')=='{{ version }}')"
     - moto_server --help
     - moto_proxy --help
