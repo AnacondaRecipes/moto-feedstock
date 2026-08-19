@@ -90,3 +90,4 @@ extra:
     - hajapy
   skip-lints:
     - missing_pip_check
+    - missing_imports_or_run_test_py
