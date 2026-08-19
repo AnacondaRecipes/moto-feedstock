@@ -16,9 +16,6 @@ build:
     - moto_server = moto.server:main
     - moto_proxy = moto.proxy:main
   script: {{ PYTHON }} -m pip install . --no-deps --no-build-isolation -vv
-  script_env:
-    # Tests require a valid CA bundle with the path to certificates.
-    # - REQUESTS_CA_BUNDLE=/ssl/cacert.pem
 
 requirements:
   host:
