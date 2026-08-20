@@ -10,12 +10,15 @@ source:
   sha256: aac8023a429e125e91c91f8f4730a67b54f518cda587352f7e67252fe3168f75
 
 build:
-  number: 1
+  number: 2
   skip: true  # [py<310]
   entry_points:
     - moto_server = moto.server:main
     - moto_proxy = moto.proxy:main
   script: {{ PYTHON }} -m pip install . --no-deps --no-build-isolation -vv
+  script_env:
+    - REQUESTS_CA_BUNDLE=$PREFIX/ssl/cacert.pem  # [not win]
+    - REQUESTS_CA_BUNDLE=%PREFIX%\Library\ssl\cacert.pem  # [win]
 
 requirements:
   host:
@@ -67,7 +70,6 @@ test:
     - moto.datapipeline
     - moto.datasync
     - moto.dax
-    - moto.dms
     - moto.dms
     - moto.ds
     - moto.dynamodb
@@ -152,8 +154,6 @@ test:
     - ca-certificates
   commands:
     - pip check
-    # Tests require a valid CA bundle with the path to certificates.
-    - export REQUESTS_CA_BUNDLE=/ssl/cacert.pem  # [not win]
     - python -c "from importlib.metadata import version; assert(version('{{ name }}')=='{{ version }}')"
     - moto_server --help
     - moto_proxy --help
@@ -176,3 +176,4 @@ extra:
     - hajapy
   skip-lints:
     - missing_pip_check
+    - missing_imports_or_run_test_py
