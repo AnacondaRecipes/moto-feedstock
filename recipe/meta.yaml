@@ -1,5 +1,5 @@
 {% set name = "moto" %}
-{% set version = "5.2.2" %}
+{% set version = "5.2.3" %}
 
 package:
   name: {{ name }}
@@ -7,10 +7,10 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: aac8023a429e125e91c91f8f4730a67b54f518cda587352f7e67252fe3168f75
+  sha256: a9e95c3218b6eda18e74571f1ced11cb1bc3151467d562c1da6037b9d19832cb
 
 build:
-  number: 2
+  number: 0
   skip: true  # [py<310]
   entry_points:
     - moto_server = moto.server:main
