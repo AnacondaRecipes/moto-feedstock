@@ -146,8 +146,13 @@ test:
     - openapi-spec-validator
     - aws-xray-sdk
     - multipart
+    # Tests require a valid CA bundle with the path to certificates.
+    - certifi
   commands:
     - pip check
+    # Addressed by https://github.com/conda/conda-build/pull/6083 (not released yet)
+    - unset REQUESTS_CA_BUNDLE AWS_CA_BUNDLE # [unix]
+    - set "REQUESTS_CA_BUNDLE=" && set "AWS_CA_BUNDLE=" # [win]
     - python -c "from importlib.metadata import version; assert(version('{{ name }}')=='{{ version }}')"
     - moto_server --help
     - moto_proxy --help
