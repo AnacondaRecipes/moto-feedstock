@@ -10,7 +10,7 @@ source:
   sha256: a9e95c3218b6eda18e74571f1ced11cb1bc3151467d562c1da6037b9d19832cb
 
 build:
-  number: 0
+  number: 1
   skip: true  # [py<310]
   entry_points:
     - moto_server = moto.server:main
@@ -151,6 +151,9 @@ test:
     - multipart
     # ca-certificates contains needed certificates.
     - ca-certificates
+    # ModuleNotFoundError: No module named 'pkg_resources'
+    - setuptools <82
+
   commands:
     - pip check
     - python -c "from importlib.metadata import version; assert(version('{{ name }}')=='{{ version }}')"
