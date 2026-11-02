@@ -110,7 +110,6 @@ test:
     - moto.mediastore
     - moto.mediastoredata
     - moto.organizations
-    - moto.packages
     - moto.polly
     - moto.ram
     - moto.rds
